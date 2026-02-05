@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Clocks.Demo/Clocks.Demo.csproj" />
+  <Project Path="Clocks/Clocks.csproj" Id="286c7bb7-df1d-4ce1-8d8f-c261956bd085" />
+</Solution>

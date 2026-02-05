@@ -1,0 +1,254 @@
+Digits 4 x 6
+----------------------------------------------------------------------------------------------------
+
+uu - ?
+ud - │
+dd - ?
+
+lu - ┘
+ru - └
+rd - ┌
+ld - ┐
+
+rr - ?
+lr - ─
+ll - ?
+
+off - ·
+
+----------------------------------------------------------------------------------------------------
+
+1
+
+┌ ─ ┐ ·
+└ ┐ │ ·
+· │ │ ·
+· │ │ ·
+┌ ┘ └ ┐
+└ ─ ─ ┘
+
+rd lr ld off
+ru ld ud off
+off ud ud off
+off ud ud off
+rd lu ru ld
+ru lr lr lu
+
+· ┌ ┐ ·
+· │ │ ·
+· │ │ ·
+· │ │ ·
+· │ │ ·
+· └ ┘ ·
+
+off rd ld off
+off ud ud off
+off ud ud off
+off ud ud off
+off ud ud off
+off ru lu off
+
+----------------------------------------------------------------------------------------------------
+
+2
+
+┌ ─ ─ ┐
+└ ─ ┐ │
+┌ ─ ┘ │
+│ ┌ ─ ┘
+│ └ ─ ┐
+└ ─ ─ ┘
+
+rd lr lr ld
+ru lr ld ud
+rd lr lu ud
+ud rd lr lu
+ud ru lr ld
+ru lr lr lu
+
+----------------------------------------------------------------------------------------------------
+
+3
+
+┌ ─ ─ ┐
+└ ─ ┐ │
+· ┌ ┘ │
+· └ ┐ │
+┌ ─ ┘ │
+└ ─ ─ ┘
+
+rd lr lr ld
+ru lr ld ud
+off rd lu ud
+off ru ld ud
+rd lr lu ud
+ru lr lr lu
+
+----------------------------------------------------------------------------------------------------
+
+4
+
+┌ ┐ ┌ ┐
+│ │ │ │
+│ └ ┘ │
+└ ─ ┐ │
+· · │ │
+· · └ ┘
+
+rd ld rd ld
+ud ud ud ud
+ud ru lu ud
+ru lr ld ud
+off off ud ud
+off off ru lu
+
+┌ ┐ · ·
+│ │ · ·
+│ └ ─ ┐
+└ ─ ┐ │
+· · │ │
+· · └ ┘
+
+rd ld off off
+ud ud off off
+ud ru lr ld
+ru lr ld ud
+off off ud ud
+off off ru lu
+
+----------------------------------------------------------------------------------------------------
+
+5
+
+┌ ─ ─ ┐
+│ ┌ ─ ┘
+│ └ ─ ┐
+└ ─ ┐ │
+┌ ─ ┘ │
+└ ─ ─ ┘
+
+rd lr lr ld
+ud rd ud lu
+ud ru lr rd
+ru lr ld ud
+rd lr lu ud
+ru lr lr lu
+
+
+----------------------------------------------------------------------------------------------------
+
+6
+
+┌ ─ ─ ┐
+│ ┌ ─ ┘
+│ └ ─ ┐
+│ ┌ ┐ │
+│ └ ┘ │
+└ ─ ─ ┘
+
+rd lr lr ld
+ud rd ud lu
+ud ru lr rd
+ud rd ld ud
+ud ru lu ud
+ru lr lr lu
+
+┌ ┐ · ·
+│ │ · ·
+│ └ ─ ┐
+│ ┌ ┐ │
+│ └ ┘ │
+└ ─ ─ ┘
+
+rd ld off off
+ud ud off off
+ud ru lr rd
+ud rd ld ud
+ud ru lu ud
+ru lr lr lu
+
+----------------------------------------------------------------------------------------------------
+
+7
+
+┌ ─ ─ ┐
+└ ─ ┐ │
+· · │ │
+· · │ │
+· · │ │
+· · └ ┘
+
+rd lr lr ld
+ru lr ld ud
+off off ud ud
+off off ud ud
+off off ud ud
+off off ru lu
+
+----------------------------------------------------------------------------------------------------
+
+8
+
+┌ ─ ─ ┐
+│ ┌ ┐ │
+│ └ ┘ │
+│ ┌ ┐ │
+│ └ ┘ │
+└ ─ ─ ┘
+
+rd lr lr ld
+ud rd ld ud
+ud ru lu ud
+ud rd ld ud
+ud ru lu ud
+ru lr lr lu
+
+----------------------------------------------------------------------------------------------------
+
+9
+
+┌ ─ ─ ┐
+│ ┌ ┐ │
+│ └ ┘ │
+└ ─ ┐ │
+┌ ─ ┘ │
+└ ─ ─ ┘
+
+rd lr lr ld
+ud rd ld ud
+ud ru lu ud
+ru lr ld ud
+rd lr lu ud
+ru lr lr lu
+
+┌ ─ ─ ┐
+│ ┌ ┐ │
+│ └ ┘ │
+└ ─ ┐ │
+· · │ │
+· · └ ┘
+
+rd lr lr ld
+ud rd ld ud
+ud ru lu ud
+ru lr ld ud
+off off ud ud
+off off ru lu
+
+----------------------------------------------------------------------------------------------------
+
+0
+
+┌ ─ ─ ┐
+│ ┌ ┐ │
+│ │ │ │
+│ │ │ │
+│ └ ┘ │
+└ ─ ─ ┘
+
+rd lr lr ld
+ud rd ld ud
+ud ud ud ud
+ud ud ud ud
+ud ru lu ud
+ru lr lr lu
