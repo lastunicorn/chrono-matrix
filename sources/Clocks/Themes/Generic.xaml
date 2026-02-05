@@ -3,6 +3,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/DustInTheWind.Clocks;component/DigitStyles.xaml" />
+        <ResourceDictionary Source="/DustInTheWind.Clocks;component/Digit46Styles.xaml" />
         <ResourceDictionary Source="/DustInTheWind.Clocks;component/MatrixClockStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 

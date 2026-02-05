@@ -1,0 +1,132 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:DustInTheWind.Clocks"
+    xmlns:clockwpf="clr-namespace:DustInTheWind.ClockWpf;assembly=DustInTheWind.ClockWpf">
+
+    <Style TargetType="{x:Type local:Digit46}">
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:Digit46}">
+
+                    <UniformGrid
+                        Rows="6"
+                        Columns="4">
+                        
+                        <!-- Row 1 -->
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderA}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderB}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderC}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderD}" />
+
+                        <!-- Row 2 -->
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderE}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderF}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderG}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderH}" />
+
+                        <!-- Row 3 -->
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderI}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderJ}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderK}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderL}" />
+
+                        <!-- Row 4 -->
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderM}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderN}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderO}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderP}" />
+
+                        <!-- Row 5 -->
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderQ}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderR}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderS}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderT}" />
+
+                        <!-- Row 6 -->
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderU}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderV}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderW}" />
+
+                        <clockwpf:AnalogClock
+                            ClockTemplate="{TemplateBinding ClockTemplate}"
+                            TimeProvider="{TemplateBinding TimeProviderX}" />
+
+                    </UniformGrid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+</ResourceDictionary>

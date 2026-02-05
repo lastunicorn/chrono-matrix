@@ -128,8 +128,8 @@ off off ru lu
 └ ─ ─ ┘
 
 rd lr lr ld
-ud rd ud lu
-ud ru lr rd
+ud rd lr lu
+ud ru lr ld
 ru lr ld ud
 rd lr lu ud
 ru lr lr lu
@@ -147,8 +147,8 @@ ru lr lr lu
 └ ─ ─ ┘
 
 rd lr lr ld
-ud rd ud lu
-ud ru lr rd
+ud rd lr lu
+ud ru lr ld
 ud rd ld ud
 ud ru lu ud
 ru lr lr lu

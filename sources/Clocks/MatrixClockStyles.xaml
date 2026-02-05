@@ -21,21 +21,21 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <local:Digit
+                            <local:Digit46
                                 Grid.Column="0"
                                 ClockTemplate="{TemplateBinding ClockTemplate}"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value1}"
-                                Margin="10 0" />
+                                Margin="20 0" />
 
-                            <local:Digit
+                            <local:Digit46
                                 Grid.Column="1"
                                 ClockTemplate="{TemplateBinding ClockTemplate}"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value2}"
-                                Margin="10 0" />
+                                Margin="20 0" />
 
                             <StackPanel
                                 Grid.Column="2"
@@ -45,34 +45,34 @@
                                 Visibility="{TemplateBinding ColonOn, Converter={StaticResource BooleanToVisibilityConverter}}">
 
                                 <Ellipse
-                                    Width="35"
-                                    Height="35"
+                                    Width="70"
+                                    Height="70"
                                     Fill="Black"
-                                    Margin="0 0 0 90"/>
+                                    Margin="0 0 0 160"/>
 
                                 <Ellipse
-                                    Width="35"
-                                    Height="35"
+                                    Width="70"
+                                    Height="70"
                                     Fill="Black"
-                                    Margin="0 90 0 0"/>
+                                    Margin="0 160 0 0"/>
 
                             </StackPanel>
 
-                            <local:Digit
+                            <local:Digit46
                                 Grid.Column="3"
                                 ClockTemplate="{TemplateBinding ClockTemplate}"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value3}"
-                                Margin="10 0" />
+                                Margin="20 0" />
 
-                            <local:Digit
+                            <local:Digit46
                                 Grid.Column="4"
                                 ClockTemplate="{TemplateBinding ClockTemplate}"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value4}"
-                                Margin="10 0" />
+                                Margin="20 0" />
 
                         </Grid>
 
