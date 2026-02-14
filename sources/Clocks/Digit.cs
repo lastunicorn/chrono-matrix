@@ -1,7 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using DustInTheWind.ClockWpf.Templates;
 using DustInTheWind.ClockWpf.Movements;
+using DustInTheWind.ClockWpf.Templates;
+using static System.TimeZoneInfo;
 
 namespace DustInTheWind.Clocks;
 
@@ -173,6 +174,15 @@ public class Digit : Control
         MovementF = new StaticMovement();
 
         UpdateMovements(0);
+
+        TimeSpan transitionTime = TimeSpan.FromSeconds(2);
+
+        MovementA.TransitionInterval = transitionTime;
+        MovementB.TransitionInterval = transitionTime;
+        MovementC.TransitionInterval = transitionTime;
+        MovementD.TransitionInterval = transitionTime;
+        MovementE.TransitionInterval = transitionTime;
+        MovementF.TransitionInterval = transitionTime;
     }
 
     private void UpdateMovements(byte b)
