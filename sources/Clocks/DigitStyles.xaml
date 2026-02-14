@@ -16,27 +16,27 @@
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderA}" />
+                            Movement="{TemplateBinding MovementA}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderB}" />
+                            Movement="{TemplateBinding MovementB}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderC}" />
+                            Movement="{TemplateBinding MovementC}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderD}" />
+                            Movement="{TemplateBinding MovementD}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderE}" />
+                            Movement="{TemplateBinding MovementE}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderF}" />
+                            Movement="{TemplateBinding MovementF}" />
 
                     </UniformGrid>
                 </ControlTemplate>

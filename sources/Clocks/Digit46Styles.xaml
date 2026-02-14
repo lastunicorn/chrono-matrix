@@ -18,109 +18,109 @@
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderA}" />
+                            Movement="{TemplateBinding MovementA}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderB}" />
+                            Movement="{TemplateBinding MovementB}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderC}" />
+                            Movement="{TemplateBinding MovementC}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderD}" />
+                            Movement="{TemplateBinding MovementD}" />
 
                         <!-- Row 2 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderE}" />
+                            Movement="{TemplateBinding MovementE}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderF}" />
+                            Movement="{TemplateBinding MovementF}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderG}" />
+                            Movement="{TemplateBinding MovementG}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderH}" />
+                            Movement="{TemplateBinding MovementH}" />
 
                         <!-- Row 3 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderI}" />
+                            Movement="{TemplateBinding MovementI}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderJ}" />
+                            Movement="{TemplateBinding MovementJ}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderK}" />
+                            Movement="{TemplateBinding MovementK}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderL}" />
+                            Movement="{TemplateBinding MovementL}" />
 
                         <!-- Row 4 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderM}" />
+                            Movement="{TemplateBinding MovementM}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderN}" />
+                            Movement="{TemplateBinding MovementN}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderO}" />
+                            Movement="{TemplateBinding MovementO}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderP}" />
+                            Movement="{TemplateBinding MovementP}" />
 
                         <!-- Row 5 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderQ}" />
+                            Movement="{TemplateBinding MovementQ}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderR}" />
+                            Movement="{TemplateBinding MovementR}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderS}" />
+                            Movement="{TemplateBinding MovementS}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderT}" />
+                            Movement="{TemplateBinding MovementT}" />
 
                         <!-- Row 6 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderU}" />
+                            Movement="{TemplateBinding MovementU}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderV}" />
+                            Movement="{TemplateBinding MovementV}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderW}" />
+                            Movement="{TemplateBinding MovementW}" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            TimeProvider="{TemplateBinding TimeProviderX}" />
+                            Movement="{TemplateBinding MovementX}" />
 
                     </UniformGrid>
                 </ControlTemplate>

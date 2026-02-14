@@ -147,24 +147,37 @@ public class MatrixClock : Control
         ClockTemplate = new CustomTemplate();
 
         timer = new Timer(HandleTimerChanged);
-        _ = timer.Change(0, 1000);
+        
+        Loaded += OnLoaded;
+    }
+
+    private void OnLoaded(object sender, RoutedEventArgs e)
+    {
+        dispatcher.InvokeAsync(() =>
+        {
+            UpdateClockValues();
+            _ = timer.Change(1000, 1000);
+        }, DispatcherPriority.Loaded);
     }
 
     private void HandleTimerChanged(object state)
     {
-        dispatcher.Invoke(() =>
+        dispatcher.InvokeAsync(() =>
         {
-            ColonOn = !BlinkingColon || !ColonOn;
+            UpdateClockValues();
+        }, DispatcherPriority.Normal);
+    }
 
-            DateTime now = DateTime.Now;
+    private void UpdateClockValues()
+    {
+        ColonOn = !BlinkingColon || !ColonOn;
 
-            Value1 = (byte)(now.Hour / 10);
-            Value2 = (byte)(now.Hour % 10);
+        DateTime now = DateTime.Now;
 
-            Value3 = (byte)(now.Minute / 10);
-            Value4 = (byte)(now.Minute % 10);
+        Value1 = (byte)(now.Hour / 10);
+        Value2 = (byte)(now.Hour % 10);
 
-            Debug.WriteLine(Value1 + ", " + Value2 + ", " + Value3 + ", " + Value4);
-        });
+        Value3 = (byte)(now.Minute / 10);
+        Value4 = (byte)(now.Minute % 10);
     }
 }

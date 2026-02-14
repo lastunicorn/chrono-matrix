@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using DustInTheWind.ClockWpf.Templates;
-using DustInTheWind.ClockWpf.TimeProviders;
+using DustInTheWind.ClockWpf.Movements;
 
 namespace DustInTheWind.Clocks;
 
@@ -37,98 +37,98 @@ public class Digit : Control
 
     #endregion
 
-    #region TimeProviderA Dependency Property
+    #region MovementA Dependency Property
 
-    public static readonly DependencyProperty TimeProviderAProperty = DependencyProperty.Register(
-        nameof(TimeProviderA),
-        typeof(StaticTimeProvider),
+    public static readonly DependencyProperty MovementAProperty = DependencyProperty.Register(
+        nameof(MovementA),
+        typeof(StaticMovement),
         typeof(Digit),
         new PropertyMetadata(null));
 
-    public StaticTimeProvider TimeProviderA
+    public StaticMovement MovementA
     {
-        get => (StaticTimeProvider)GetValue(TimeProviderAProperty);
-        private set => SetValue(TimeProviderAProperty, value);
+        get => (StaticMovement)GetValue(MovementAProperty);
+        private set => SetValue(MovementAProperty, value);
     }
 
     #endregion
 
-    #region TimeProviderB Dependency Property
+    #region MovementB Dependency Property
 
-    public static readonly DependencyProperty TimeProviderBProperty = DependencyProperty.Register(
-        nameof(TimeProviderB),
-        typeof(StaticTimeProvider),
+    public static readonly DependencyProperty MovementBProperty = DependencyProperty.Register(
+        nameof(MovementB),
+        typeof(StaticMovement),
         typeof(Digit),
         new PropertyMetadata(null));
 
-    public StaticTimeProvider TimeProviderB
+    public StaticMovement MovementB
     {
-        get => (StaticTimeProvider)GetValue(TimeProviderBProperty);
-        private set => SetValue(TimeProviderBProperty, value);
+        get => (StaticMovement)GetValue(MovementBProperty);
+        private set => SetValue(MovementBProperty, value);
     }
 
     #endregion
 
-    #region TimeProviderC Dependency Property
+    #region MovementC Dependency Property
 
-    public static readonly DependencyProperty TimeProviderCProperty = DependencyProperty.Register(
-        nameof(TimeProviderC),
-        typeof(StaticTimeProvider),
+    public static readonly DependencyProperty MovementCProperty = DependencyProperty.Register(
+        nameof(MovementC),
+        typeof(StaticMovement),
         typeof(Digit),
         new PropertyMetadata(null));
 
-    public StaticTimeProvider TimeProviderC
+    public StaticMovement MovementC
     {
-        get => (StaticTimeProvider)GetValue(TimeProviderCProperty);
-        private set => SetValue(TimeProviderCProperty, value);
+        get => (StaticMovement)GetValue(MovementCProperty);
+        private set => SetValue(MovementCProperty, value);
     }
 
     #endregion
 
-    #region TimeProviderD Dependency Property
+    #region MovementD Dependency Property
 
-    public static readonly DependencyProperty TimeProviderDProperty = DependencyProperty.Register(
-        nameof(TimeProviderD),
-        typeof(StaticTimeProvider),
+    public static readonly DependencyProperty MovementDProperty = DependencyProperty.Register(
+        nameof(MovementD),
+        typeof(StaticMovement),
         typeof(Digit),
         new PropertyMetadata(null));
 
-    public StaticTimeProvider TimeProviderD
+    public StaticMovement MovementD
     {
-        get => (StaticTimeProvider)GetValue(TimeProviderDProperty);
-        private set => SetValue(TimeProviderDProperty, value);
+        get => (StaticMovement)GetValue(MovementDProperty);
+        private set => SetValue(MovementDProperty, value);
     }
 
     #endregion
 
-    #region TimeProviderE Dependency Property
+    #region MovementE Dependency Property
 
-    public static readonly DependencyProperty TimeProviderEProperty = DependencyProperty.Register(
-        nameof(TimeProviderE),
-        typeof(StaticTimeProvider),
+    public static readonly DependencyProperty MovementEProperty = DependencyProperty.Register(
+        nameof(MovementE),
+        typeof(StaticMovement),
         typeof(Digit),
         new PropertyMetadata(null));
 
-    public StaticTimeProvider TimeProviderE
+    public StaticMovement MovementE
     {
-        get => (StaticTimeProvider)GetValue(TimeProviderEProperty);
-        private set => SetValue(TimeProviderEProperty, value);
+        get => (StaticMovement)GetValue(MovementEProperty);
+        private set => SetValue(MovementEProperty, value);
     }
 
     #endregion
 
-    #region TimeProviderF Dependency Property
+    #region MovementF Dependency Property
 
-    public static readonly DependencyProperty TimeProviderFProperty = DependencyProperty.Register(
-        nameof(TimeProviderF),
-        typeof(StaticTimeProvider),
+    public static readonly DependencyProperty MovementFProperty = DependencyProperty.Register(
+        nameof(MovementF),
+        typeof(StaticMovement),
         typeof(Digit),
         new PropertyMetadata(null));
 
-    public StaticTimeProvider TimeProviderF
+    public StaticMovement MovementF
     {
-        get => (StaticTimeProvider)GetValue(TimeProviderFProperty);
-        private set => SetValue(TimeProviderFProperty, value);
+        get => (StaticMovement)GetValue(MovementFProperty);
+        private set => SetValue(MovementFProperty, value);
     }
 
     #endregion
@@ -146,7 +146,7 @@ public class Digit : Control
         if (d is Digit digit)
         {
             if (e.NewValue is byte b)
-                digit.UpdateTimeProviders(b);
+                digit.UpdateMovements(b);
         }
     }
 
@@ -165,109 +165,109 @@ public class Digit : Control
 
     public Digit()
     {
-        TimeProviderA = new StaticTimeProvider();
-        TimeProviderB = new StaticTimeProvider();
-        TimeProviderC = new StaticTimeProvider();
-        TimeProviderD = new StaticTimeProvider();
-        TimeProviderE = new StaticTimeProvider();
-        TimeProviderF = new StaticTimeProvider();
+        MovementA = new StaticMovement();
+        MovementB = new StaticMovement();
+        MovementC = new StaticMovement();
+        MovementD = new StaticMovement();
+        MovementE = new StaticMovement();
+        MovementF = new StaticMovement();
 
-        UpdateTimeProviders(0);
+        UpdateMovements(0);
     }
 
-    private void UpdateTimeProviders(byte b)
+    private void UpdateMovements(byte b)
     {
         switch (b)
         {
             default:
             case 0:
-                TimeProviderA.Time = RD;
-                TimeProviderB.Time = LD;
-                TimeProviderC.Time = UD;
-                TimeProviderD.Time = UD;
-                TimeProviderE.Time = RU;
-                TimeProviderF.Time = LU;
+                MovementA.Time = RD;
+                MovementB.Time = LD;
+                MovementC.Time = UD;
+                MovementD.Time = UD;
+                MovementE.Time = RU;
+                MovementF.Time = LU;
                 break;
 
             case 1:
-                TimeProviderA.Time = OFF;
-                TimeProviderB.Time = DD;
-                TimeProviderC.Time = OFF;
-                TimeProviderD.Time = UD;
-                TimeProviderE.Time = OFF;
-                TimeProviderF.Time = UU;
+                MovementA.Time = OFF;
+                MovementB.Time = DD;
+                MovementC.Time = OFF;
+                MovementD.Time = UD;
+                MovementE.Time = OFF;
+                MovementF.Time = UU;
                 break;
 
             case 2:
-                TimeProviderA.Time = RR;
-                TimeProviderB.Time = LD;
-                TimeProviderC.Time = RD;
-                TimeProviderD.Time = LU;
-                TimeProviderE.Time = RU;
-                TimeProviderF.Time = LL;
+                MovementA.Time = RR;
+                MovementB.Time = LD;
+                MovementC.Time = RD;
+                MovementD.Time = LU;
+                MovementE.Time = RU;
+                MovementF.Time = LL;
                 break;
 
             case 3:
-                TimeProviderA.Time = RR;
-                TimeProviderB.Time = LD;
-                TimeProviderC.Time = RR;
-                TimeProviderD.Time = UD;
-                TimeProviderE.Time = RR;
-                TimeProviderF.Time = LU;
+                MovementA.Time = RR;
+                MovementB.Time = LD;
+                MovementC.Time = RR;
+                MovementD.Time = UD;
+                MovementE.Time = RR;
+                MovementF.Time = LU;
                 break;
 
             case 4:
-                TimeProviderA.Time = DD;
-                TimeProviderB.Time = DD;
-                TimeProviderC.Time = RU;
-                TimeProviderD.Time = LD;
-                TimeProviderE.Time = OFF;
-                TimeProviderF.Time = UU;
+                MovementA.Time = DD;
+                MovementB.Time = DD;
+                MovementC.Time = RU;
+                MovementD.Time = LD;
+                MovementE.Time = OFF;
+                MovementF.Time = UU;
                 break;
 
             case 5:
-                TimeProviderA.Time = RD;
-                TimeProviderB.Time = LL;
-                TimeProviderC.Time = RU;
-                TimeProviderD.Time = LD;
-                TimeProviderE.Time = RR;
-                TimeProviderF.Time = LU;
+                MovementA.Time = RD;
+                MovementB.Time = LL;
+                MovementC.Time = RU;
+                MovementD.Time = LD;
+                MovementE.Time = RR;
+                MovementF.Time = LU;
                 break;
 
             case 6:
-                TimeProviderA.Time = RD;
-                TimeProviderB.Time = LL;
-                TimeProviderC.Time = UD;
-                TimeProviderD.Time = LD;
-                TimeProviderE.Time = RU;
-                TimeProviderF.Time = LU;
+                MovementA.Time = RD;
+                MovementB.Time = LL;
+                MovementC.Time = UD;
+                MovementD.Time = LD;
+                MovementE.Time = RU;
+                MovementF.Time = LU;
                 break;
 
             case 7:
-                TimeProviderA.Time = RR;
-                TimeProviderB.Time = LD;
-                TimeProviderC.Time = OFF;
-                TimeProviderD.Time = UD;
-                TimeProviderE.Time = OFF;
-                TimeProviderF.Time = UU;
+                MovementA.Time = RR;
+                MovementB.Time = LD;
+                MovementC.Time = OFF;
+                MovementD.Time = UD;
+                MovementE.Time = OFF;
+                MovementF.Time = UU;
                 break;
 
             case 8:
-                TimeProviderA.Time = RD;
-                TimeProviderB.Time = LD;
-                TimeProviderC.Time = RD;
-                TimeProviderD.Time = LD;
-                TimeProviderE.Time = RU;
-                TimeProviderF.Time = LU;
+                MovementA.Time = RD;
+                MovementB.Time = LD;
+                MovementC.Time = RD;
+                MovementD.Time = LD;
+                MovementE.Time = RU;
+                MovementF.Time = LU;
                 break;
 
             case 9:
-                TimeProviderA.Time = RD;
-                TimeProviderB.Time = LD;
-                TimeProviderC.Time = RU;
-                TimeProviderD.Time = UD;
-                TimeProviderE.Time = RR;
-                TimeProviderF.Time = LU;
+                MovementA.Time = RD;
+                MovementB.Time = LD;
+                MovementC.Time = RU;
+                MovementD.Time = UD;
+                MovementE.Time = RR;
+                MovementF.Time = LU;
                 break;
         }
     }

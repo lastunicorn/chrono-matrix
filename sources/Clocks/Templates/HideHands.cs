@@ -6,7 +6,7 @@ namespace DustInTheWind.Clocks.Templates;
 
 internal class HideHands : Shape
 {
-    public override void DoRender(ClockDrawingContext context)
+    protected override void DoRender(ClockDrawingContext context)
     {
         Geometry geometry = CreateGeometry(context);
 
