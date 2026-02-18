@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ChronoMatrix/ChronoMatrix.csproj" />
+  <Project Path="ChronoMatrix.Controls/ChronoMatrix.Controls.csproj" Id="286c7bb7-df1d-4ce1-8d8f-c261956bd085" />
+</Solution>

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 using DustInTheWind.ClockWpf.Movements;
 using DustInTheWind.ClockWpf.Templates;
 
-namespace DustInTheWind.Clocks;
+namespace DustInTheWind.ChronoMatrix.Controls;
 
 public class Digit46 : Control
 {

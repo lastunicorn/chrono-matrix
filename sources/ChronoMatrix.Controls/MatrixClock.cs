@@ -1,11 +1,10 @@
-﻿using System.Diagnostics;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
-using DustInTheWind.Clocks.Templates;
+using DustInTheWind.ChronoMatrix.Controls.Templates;
 using DustInTheWind.ClockWpf.Templates;
 
-namespace DustInTheWind.Clocks;
+namespace DustInTheWind.ChronoMatrix.Controls;
 
 public class MatrixClock : Control
 {

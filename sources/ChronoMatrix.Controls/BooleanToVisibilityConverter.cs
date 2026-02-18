@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Data;
 
-namespace DustInTheWind.Clocks;
+namespace DustInTheWind.ChronoMatrix.Controls;
 
 [ValueConversion(typeof(bool), typeof(Visibility))]
 public sealed class BooleanToVisibilityConverter : IValueConverter

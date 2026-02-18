@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace DustInTheWind.Clocks.Demo;
+namespace DustInTheWind.ChronoMatrix;
 
 public class ViewModelBase : INotifyPropertyChanged
 {

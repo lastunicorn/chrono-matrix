@@ -2,7 +2,7 @@
 using DustInTheWind.ClockWpf.Shapes;
 using DustInTheWind.ClockWpf.Templates;
 
-namespace DustInTheWind.Clocks.Templates;
+namespace DustInTheWind.ChronoMatrix.Controls.Templates;
 
 internal class CustomTemplate : ClockTemplate
 {

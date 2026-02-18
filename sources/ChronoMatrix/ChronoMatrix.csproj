@@ -14,7 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Clocks\Clocks.csproj" />
+		<ProjectReference Include="..\ChronoMatrix.Controls\ChronoMatrix.Controls.csproj" />
 	</ItemGroup>
 
 </Project>

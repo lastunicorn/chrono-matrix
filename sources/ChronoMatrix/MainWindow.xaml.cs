@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace DustInTheWind.Clocks.Demo
+namespace DustInTheWind.ChronoMatrix
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

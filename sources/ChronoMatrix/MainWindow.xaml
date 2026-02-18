@@ -1,19 +1,20 @@
 ﻿<Window
-    x:Class="DustInTheWind.Clocks.Demo.MainWindow"
+    x:Class="DustInTheWind.ChronoMatrix.MainWindow"
     
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:clockwpf="clr-namespace:DustInTheWind.ClockWpf;assembly=DustInTheWind.ClockWpf"
-    xmlns:clocks="clr-namespace:DustInTheWind.Clocks;assembly=DustInTheWind.Clocks"
-    xmlns:local="clr-namespace:DustInTheWind.Clocks.Demo"
+    xmlns:clocks="clr-namespace:DustInTheWind.ChronoMatrix.Controls;assembly=DustInTheWind.ChronoMatrix.Controls"
+    xmlns:local="clr-namespace:DustInTheWind.ChronoMatrix"
     
     mc:Ignorable="d"
     Title="Digital Clock"
     Height="450"
     Width="800"
-    d:DataContext="{d:DesignInstance local:MainViewModel}">
+    d:DataContext="{d:DesignInstance local:MainViewModel}"
+    ResizeMode="CanResizeWithGrip">
 
     <clocks:MatrixClock
         Margin="20"

@@ -2,7 +2,7 @@
 using System.Windows.Media;
 using DustInTheWind.ClockWpf.Shapes;
 
-namespace DustInTheWind.Clocks.Templates;
+namespace DustInTheWind.ChronoMatrix.Controls.Templates;
 
 internal class HideHands : Shape
 {

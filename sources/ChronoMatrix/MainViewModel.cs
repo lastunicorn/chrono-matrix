@@ -1,4 +1,4 @@
-﻿namespace DustInTheWind.Clocks.Demo;
+﻿namespace DustInTheWind.ChronoMatrix;
 
 public class MainViewModel : ViewModelBase
 {
