@@ -15,7 +15,9 @@
     Width="800"
     d:DataContext="{d:DesignInstance local:MainViewModel}"
     ResizeMode="CanResizeWithGrip"
-    local:WindowDragBehavior.EnableDrag="True">
+    local:WindowDragBehavior.EnableDrag="True"
+    WindowStyle="None"
+    WindowStartupLocation="CenterScreen">
 
     <Grid>
         <clocks:MatrixClock
@@ -24,14 +26,77 @@
 
         <local:ShyControl
             HorizontalAlignment="Left"
-            VerticalAlignment="Bottom">
+            VerticalAlignment="Top">
+
+            <StackPanel>
+
+                <TextBlock
+                    FontSize="12"
+                    Foreground="Gray"
+                    Text="Chrono Matrix - "
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left"/>
+
+                <TextBlock
+                    FontSize="12"
+                    Foreground="Gray"
+                    Text="{Binding Version}"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left"/>
+
+            </StackPanel>
+                
+        </local:ShyControl>
+
+        <local:ShyControl
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Padding="20 0 0 20">
             
-            <TextBlock
-                FontSize="12"
-                Foreground="Gray"
-                Text="{Binding Version}"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left"/>
+            <Button
+                Content="✕"
+                FontSize="16"
+                Padding="10,5"
+                Cursor="Hand"
+                Command="{Binding ExitAppCommand}">
+                
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="Gray"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    
+                                    <Border
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        Padding="{TemplateBinding Padding}">
+                                        
+                                        <ContentPresenter
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"/>
+                                        
+                                    </Border>
+                                    
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Background" Value="OrangeRed"/>
+                            </Trigger>
+                        </Style.Triggers>
+                        
+                    </Style>
+                </Button.Style>
+                
+            </Button>
                 
         </local:ShyControl>
     </Grid>
