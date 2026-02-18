@@ -26,14 +26,15 @@
 
         <local:ShyControl
             HorizontalAlignment="Left"
-            VerticalAlignment="Top">
+            VerticalAlignment="Bottom">
 
-            <StackPanel>
+            <StackPanel
+                Orientation="Horizontal">
 
                 <TextBlock
                     FontSize="12"
                     Foreground="Gray"
-                    Text="Chrono Matrix - "
+                    Text="Chrono Matrix"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Left"/>
 
@@ -42,7 +43,8 @@
                     Foreground="Gray"
                     Text="{Binding Version}"
                     VerticalAlignment="Bottom"
-                    HorizontalAlignment="Left"/>
+                    HorizontalAlignment="Left"
+                    Margin="5 0 0 0"/>
 
             </StackPanel>
                 
