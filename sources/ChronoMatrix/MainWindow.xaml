@@ -10,7 +10,7 @@
     xmlns:local="clr-namespace:DustInTheWind.ChronoMatrix"
     
     mc:Ignorable="d"
-    Title="Digital Clock"
+    Title="Chrono Matrix"
     Height="450"
     Width="800"
     d:DataContext="{d:DesignInstance local:MainViewModel}"
