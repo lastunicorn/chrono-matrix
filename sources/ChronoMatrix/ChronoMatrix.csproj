@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UseWPF>true</UseWPF>
 		<RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
-		<AssemblyName>DustInTheWind.$(MSBuildProjectName)</AssemblyName>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -16,6 +16,14 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\ChronoMatrix.Controls\ChronoMatrix.Controls.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 
 </Project>
