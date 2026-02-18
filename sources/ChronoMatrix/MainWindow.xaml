@@ -21,14 +21,17 @@
             Margin="20"
             BlinkingColon="False"/>
 
-        <TextBlock
+        <local:ShyControl
             HorizontalAlignment="Left"
-            VerticalAlignment="Bottom"
-            Margin="10"
-            FontSize="12"
-            Foreground="Gray"
-            Text="{Binding Version}" />
-
+            VerticalAlignment="Bottom">
+            
+            <TextBlock
+                FontSize="12"
+                Foreground="Gray"
+                Text="{Binding Version}"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"/>
+                
+        </local:ShyControl>
     </Grid>
-
 </Window>
