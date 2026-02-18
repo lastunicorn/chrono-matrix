@@ -6,6 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:clockwpf="clr-namespace:DustInTheWind.ClockWpf;assembly=DustInTheWind.ClockWpf"
+    xmlns:wpfToolkit="clr-namespace:DustInTheWind.WpfToolkit;assembly=DustInTheWind.WpfToolkit"
     xmlns:clocks="clr-namespace:DustInTheWind.ChronoMatrix.Controls;assembly=DustInTheWind.ChronoMatrix.Controls"
     xmlns:local="clr-namespace:DustInTheWind.ChronoMatrix"
     
@@ -15,7 +16,7 @@
     Width="800"
     d:DataContext="{d:DesignInstance local:MainViewModel}"
     ResizeMode="CanResizeWithGrip"
-    local:WindowDragBehavior.EnableDrag="True"
+    wpfToolkit:WindowDragBehavior.EnableDrag="True"
     WindowStyle="None"
     WindowStartupLocation="CenterScreen">
 
@@ -24,7 +25,7 @@
             Margin="20"
             BlinkingColon="False"/>
 
-        <local:ShyControl
+        <wpfToolkit:ShyControl
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom">
 
@@ -48,9 +49,9 @@
 
             </StackPanel>
                 
-        </local:ShyControl>
+        </wpfToolkit:ShyControl>
 
-        <local:ShyControl
+        <wpfToolkit:ShyControl
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
             Padding="20 0 0 20">
@@ -100,6 +101,6 @@
                 
             </Button>
                 
-        </local:ShyControl>
+        </wpfToolkit:ShyControl>
     </Grid>
 </Window>
