@@ -1,4 +1,7 @@
 <Solution>
   <Project Path="ChronoMatrix/ChronoMatrix.csproj" />
+  <Folder Name="/SolutionItems/">
+    <File Path="Directory.Build.props" />
+  </Folder>
   <Project Path="ChronoMatrix.Controls/ChronoMatrix.Controls.csproj" Id="286c7bb7-df1d-4ce1-8d8f-c261956bd085" />
 </Solution>

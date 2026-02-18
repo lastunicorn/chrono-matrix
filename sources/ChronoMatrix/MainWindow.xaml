@@ -16,8 +16,19 @@
     d:DataContext="{d:DesignInstance local:MainViewModel}"
     ResizeMode="CanResizeWithGrip">
 
-    <clocks:MatrixClock
-        Margin="20"
-        BlinkingColon="False"/>
+    <Grid>
+        <clocks:MatrixClock
+            Margin="20"
+            BlinkingColon="False"/>
+
+        <TextBlock
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="10"
+            FontSize="12"
+            Foreground="Gray"
+            Text="{Binding Version}" />
+
+    </Grid>
 
 </Window>
