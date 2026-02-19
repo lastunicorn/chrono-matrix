@@ -17,7 +17,7 @@ internal class CustomTemplate : ClockTemplate
         };
         yield return background;
 
-        RodHand hourHand = new()
+        BarHand hourHand = new()
         {
             Name = "Hour Hand",
             TimeComponent = TimeComponent.Hour,
@@ -30,7 +30,7 @@ internal class CustomTemplate : ClockTemplate
         };
         yield return hourHand;
 
-        RodHand minuteHand = new()
+        BarHand minuteHand = new()
         {
             Name = "Minute Hand",
             TimeComponent = TimeComponent.Minute,

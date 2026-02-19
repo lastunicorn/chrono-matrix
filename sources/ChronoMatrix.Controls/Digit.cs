@@ -174,14 +174,14 @@ public class Digit : Control
 
         UpdateMovements(0);
 
-        TimeSpan transitionTime = TimeSpan.FromSeconds(2);
+        double transitionSpeed = 4000;
 
-        MovementA.TransitionInterval = transitionTime;
-        MovementB.TransitionInterval = transitionTime;
-        MovementC.TransitionInterval = transitionTime;
-        MovementD.TransitionInterval = transitionTime;
-        MovementE.TransitionInterval = transitionTime;
-        MovementF.TransitionInterval = transitionTime;
+        MovementA.TransitionSpeed = transitionSpeed;
+        MovementB.TransitionSpeed = transitionSpeed;
+        MovementC.TransitionSpeed = transitionSpeed;
+        MovementD.TransitionSpeed = transitionSpeed;
+        MovementE.TransitionSpeed = transitionSpeed;
+        MovementF.TransitionSpeed = transitionSpeed;
     }
 
     private void UpdateMovements(byte b)

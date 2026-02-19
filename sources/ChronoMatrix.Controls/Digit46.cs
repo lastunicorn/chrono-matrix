@@ -8,12 +8,12 @@ namespace DustInTheWind.ChronoMatrix.Controls;
 public class Digit46 : Control
 {
     private static readonly TimeSpan UU = new(00, 00, 00);
-    private static readonly TimeSpan UD = new(00, 30, 00);
+    private static readonly TimeSpan UD = new(06, 00, 00);
     private static readonly TimeSpan DD = new(06, 30, 00);
 
     private static readonly TimeSpan LU = new(09, 00, 00);
-    private static readonly TimeSpan RU = new(00, 15, 00);
-    private static readonly TimeSpan RD = new(03, 30, 00);
+    private static readonly TimeSpan RU = new(03, 00, 00);
+    private static readonly TimeSpan RD = new(06, 15, 00);
     private static readonly TimeSpan LD = new(09, 30, 00);
 
     private static readonly TimeSpan RR = new(03, 15, 00);
@@ -481,32 +481,32 @@ public class Digit46 : Control
 
         UpdateMovements(0);
 
-        TimeSpan transitionTime = TimeSpan.FromSeconds(2);
+        double transitionSpeed = 4000;
 
-        MovementA.TransitionInterval = transitionTime;
-        MovementB.TransitionInterval = transitionTime;
-        MovementC.TransitionInterval = transitionTime;
-        MovementD.TransitionInterval = transitionTime;
-        MovementE.TransitionInterval = transitionTime;
-        MovementF.TransitionInterval = transitionTime;
-        MovementG.TransitionInterval = transitionTime;
-        MovementH.TransitionInterval = transitionTime;
-        MovementI.TransitionInterval = transitionTime;
-        MovementJ.TransitionInterval = transitionTime;
-        MovementK.TransitionInterval = transitionTime;
-        MovementL.TransitionInterval = transitionTime;
-        MovementM.TransitionInterval = transitionTime;
-        MovementN.TransitionInterval = transitionTime;
-        MovementO.TransitionInterval = transitionTime;
-        MovementP.TransitionInterval = transitionTime;
-        MovementQ.TransitionInterval = transitionTime;
-        MovementR.TransitionInterval = transitionTime;
-        MovementS.TransitionInterval = transitionTime;
-        MovementT.TransitionInterval = transitionTime;
-        MovementU.TransitionInterval = transitionTime;
-        MovementV.TransitionInterval = transitionTime;
-        MovementW.TransitionInterval = transitionTime;
-        MovementX.TransitionInterval = transitionTime;
+        MovementA.TransitionSpeed = transitionSpeed;
+        MovementB.TransitionSpeed = transitionSpeed;
+        MovementC.TransitionSpeed = transitionSpeed;
+        MovementD.TransitionSpeed = transitionSpeed;
+        MovementE.TransitionSpeed = transitionSpeed;
+        MovementF.TransitionSpeed = transitionSpeed;
+        MovementG.TransitionSpeed = transitionSpeed;
+        MovementH.TransitionSpeed = transitionSpeed;
+        MovementI.TransitionSpeed = transitionSpeed;
+        MovementJ.TransitionSpeed = transitionSpeed;
+        MovementK.TransitionSpeed = transitionSpeed;
+        MovementL.TransitionSpeed = transitionSpeed;
+        MovementM.TransitionSpeed = transitionSpeed;
+        MovementN.TransitionSpeed = transitionSpeed;
+        MovementO.TransitionSpeed = transitionSpeed;
+        MovementP.TransitionSpeed = transitionSpeed;
+        MovementQ.TransitionSpeed = transitionSpeed;
+        MovementR.TransitionSpeed = transitionSpeed;
+        MovementS.TransitionSpeed = transitionSpeed;
+        MovementT.TransitionSpeed = transitionSpeed;
+        MovementU.TransitionSpeed = transitionSpeed;
+        MovementV.TransitionSpeed = transitionSpeed;
+        MovementW.TransitionSpeed = transitionSpeed;
+        MovementX.TransitionSpeed = transitionSpeed;
     }
 
     private void UpdateMovements(byte b)

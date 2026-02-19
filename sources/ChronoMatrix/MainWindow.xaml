@@ -54,7 +54,7 @@
         <wpfToolkit:ShyControl
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Padding="20 0 0 20">
+            Padding="0">
             
             <Button
                 Content="✕"
