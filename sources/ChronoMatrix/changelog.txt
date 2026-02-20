@@ -1,0 +1,18 @@
+﻿Chrono Matrix
+================================================================================
+
+Ver 1.2.0
+--------------------------------------------------------------------------------
+[change] Slightly randomized the speed of each clock.
+
+
+Ver 1.1.0
+--------------------------------------------------------------------------------
+[change] Upgrade to Clock WPF 1.4.0
+[change] Configured each clock to move with a certain speed as oposed to do the
+         entire move in a certain time.
+
+Ver 1.0.0
+--------------------------------------------------------------------------------
+[new   ] First release.
+[new   ] A digital clock "draw" using the hands of 96 analog clocks.
