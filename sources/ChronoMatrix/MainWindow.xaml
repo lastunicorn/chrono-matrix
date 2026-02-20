@@ -22,7 +22,7 @@
 
     <Grid>
         <clocks:MatrixClock
-            Margin="20"
+            Margin="20 30"
             BlinkingColon="False"/>
 
         <wpfToolkit:ShyControl

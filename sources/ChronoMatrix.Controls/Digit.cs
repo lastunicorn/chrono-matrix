@@ -176,12 +176,12 @@ public class Digit : Control
 
         double transitionSpeed = 4000;
 
-        MovementA.TransitionSpeed = transitionSpeed;
-        MovementB.TransitionSpeed = transitionSpeed;
-        MovementC.TransitionSpeed = transitionSpeed;
-        MovementD.TransitionSpeed = transitionSpeed;
-        MovementE.TransitionSpeed = transitionSpeed;
-        MovementF.TransitionSpeed = transitionSpeed;
+        MovementA.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
+        MovementB.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
+        MovementC.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
+        MovementD.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
+        MovementE.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
+        MovementF.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
     }
 
     private void UpdateMovements(byte b)
