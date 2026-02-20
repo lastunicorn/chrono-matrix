@@ -5,7 +5,7 @@ using DustInTheWind.ClockWpf.Templates;
 
 namespace DustInTheWind.ChronoMatrix.Controls;
 
-public class Digit : Control
+public class Digit23 : Control
 {
     private static readonly TimeSpan UU = new(00, 00, 00);
     private static readonly TimeSpan UD = new(00, 30, 00);
@@ -26,7 +26,7 @@ public class Digit : Control
     public static readonly DependencyProperty ClockTemplateProperty = DependencyProperty.Register(
         nameof(ClockTemplate),
         typeof(ClockTemplate),
-        typeof(Digit),
+        typeof(Digit23),
         new PropertyMetadata(null));
 
     public ClockTemplate ClockTemplate
@@ -42,7 +42,7 @@ public class Digit : Control
     public static readonly DependencyProperty MovementAProperty = DependencyProperty.Register(
         nameof(MovementA),
         typeof(StaticMovement),
-        typeof(Digit),
+        typeof(Digit23),
         new PropertyMetadata(null));
 
     public StaticMovement MovementA
@@ -58,7 +58,7 @@ public class Digit : Control
     public static readonly DependencyProperty MovementBProperty = DependencyProperty.Register(
         nameof(MovementB),
         typeof(StaticMovement),
-        typeof(Digit),
+        typeof(Digit23),
         new PropertyMetadata(null));
 
     public StaticMovement MovementB
@@ -74,7 +74,7 @@ public class Digit : Control
     public static readonly DependencyProperty MovementCProperty = DependencyProperty.Register(
         nameof(MovementC),
         typeof(StaticMovement),
-        typeof(Digit),
+        typeof(Digit23),
         new PropertyMetadata(null));
 
     public StaticMovement MovementC
@@ -90,7 +90,7 @@ public class Digit : Control
     public static readonly DependencyProperty MovementDProperty = DependencyProperty.Register(
         nameof(MovementD),
         typeof(StaticMovement),
-        typeof(Digit),
+        typeof(Digit23),
         new PropertyMetadata(null));
 
     public StaticMovement MovementD
@@ -106,7 +106,7 @@ public class Digit : Control
     public static readonly DependencyProperty MovementEProperty = DependencyProperty.Register(
         nameof(MovementE),
         typeof(StaticMovement),
-        typeof(Digit),
+        typeof(Digit23),
         new PropertyMetadata(null));
 
     public StaticMovement MovementE
@@ -122,7 +122,7 @@ public class Digit : Control
     public static readonly DependencyProperty MovementFProperty = DependencyProperty.Register(
         nameof(MovementF),
         typeof(StaticMovement),
-        typeof(Digit),
+        typeof(Digit23),
         new PropertyMetadata(null));
 
     public StaticMovement MovementF
@@ -138,12 +138,12 @@ public class Digit : Control
     public static readonly DependencyProperty ValueProperty = DependencyProperty.Register(
         nameof(Value),
         typeof(byte),
-        typeof(Digit),
+        typeof(Digit23),
         new PropertyMetadata((byte)0, HandleValueChanged));
 
     private static void HandleValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
-        if (d is Digit digit)
+        if (d is Digit23 digit)
         {
             if (e.NewValue is byte b)
                 digit.UpdateMovements(b);
@@ -158,12 +158,12 @@ public class Digit : Control
 
     #endregion
 
-    static Digit()
+    static Digit23()
     {
-        DefaultStyleKeyProperty.OverrideMetadata(typeof(Digit), new FrameworkPropertyMetadata(typeof(Digit)));
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(Digit23), new FrameworkPropertyMetadata(typeof(Digit23)));
     }
 
-    public Digit()
+    public Digit23()
     {
         MovementA = new StaticMovement();
         MovementB = new StaticMovement();

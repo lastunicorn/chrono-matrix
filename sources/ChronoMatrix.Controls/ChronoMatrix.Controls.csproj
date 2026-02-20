@@ -16,7 +16,7 @@
 		<Compile Update="Digit46.cs">
 		  <SubType>Code</SubType>
 		</Compile>
-		<Compile Update="Digit.cs">
+		<Compile Update="Digit23.cs">
 			<SubType>Code</SubType>
 		</Compile>
 	</ItemGroup>

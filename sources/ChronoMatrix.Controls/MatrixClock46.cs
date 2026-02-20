@@ -6,7 +6,7 @@ using DustInTheWind.ClockWpf.Templates;
 
 namespace DustInTheWind.ChronoMatrix.Controls;
 
-public class MatrixClock : Control
+public class MatrixClock46 : Control
 {
     private readonly Timer timer;
 
@@ -15,7 +15,7 @@ public class MatrixClock : Control
     public static readonly DependencyProperty ClockTemplateProperty = DependencyProperty.Register(
         nameof(ClockTemplate),
         typeof(ClockTemplate),
-        typeof(MatrixClock),
+        typeof(MatrixClock46),
         new PropertyMetadata((ClockTemplate)null));
 
     public ClockTemplate ClockTemplate
@@ -31,7 +31,7 @@ public class MatrixClock : Control
     internal static readonly DependencyPropertyKey Value1PropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(Value1),
         typeof(byte),
-        typeof(MatrixClock),
+        typeof(MatrixClock46),
         new PropertyMetadata((byte)0));
 
     internal readonly static DependencyProperty Value1Property = Value1PropertyKey.DependencyProperty;
@@ -49,7 +49,7 @@ public class MatrixClock : Control
     internal static readonly DependencyPropertyKey Value2PropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(Value2),
         typeof(byte),
-        typeof(MatrixClock),
+        typeof(MatrixClock46),
         new PropertyMetadata((byte)0));
 
     internal readonly static DependencyProperty Value2Property = Value2PropertyKey.DependencyProperty;
@@ -67,7 +67,7 @@ public class MatrixClock : Control
     internal static readonly DependencyPropertyKey Value3PropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(Value3),
         typeof(byte),
-        typeof(MatrixClock),
+        typeof(MatrixClock46),
         new PropertyMetadata((byte)0));
 
     internal readonly static DependencyProperty Value3Property = Value3PropertyKey.DependencyProperty;
@@ -85,7 +85,7 @@ public class MatrixClock : Control
     internal static readonly DependencyPropertyKey Value4PropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(Value4),
         typeof(byte),
-        typeof(MatrixClock),
+        typeof(MatrixClock46),
         new PropertyMetadata((byte)0));
 
     internal readonly static DependencyProperty Value4Property = Value4PropertyKey.DependencyProperty;
@@ -103,7 +103,7 @@ public class MatrixClock : Control
     internal static readonly DependencyPropertyKey ColonOnPropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(ColonOn),
         typeof(bool),
-        typeof(MatrixClock),
+        typeof(MatrixClock46),
         new PropertyMetadata(true));
 
     internal readonly static DependencyProperty ColonOnProperty = ColonOnPropertyKey.DependencyProperty;
@@ -121,7 +121,7 @@ public class MatrixClock : Control
     internal static readonly DependencyProperty BlinkingColonProperty = DependencyProperty.Register(
         nameof(BlinkingColon),
         typeof(bool),
-        typeof(MatrixClock),
+        typeof(MatrixClock46),
         new PropertyMetadata(true));
 
     public bool BlinkingColon
@@ -132,14 +132,14 @@ public class MatrixClock : Control
 
     #endregion
 
-    static MatrixClock()
+    static MatrixClock46()
     {
-        DefaultStyleKeyProperty.OverrideMetadata(typeof(MatrixClock), new FrameworkPropertyMetadata(typeof(MatrixClock)));
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(MatrixClock46), new FrameworkPropertyMetadata(typeof(MatrixClock46)));
     }
 
     private Dispatcher dispatcher;
 
-    public MatrixClock()
+    public MatrixClock46()
     {
         dispatcher = Dispatcher.CurrentDispatcher;
 

@@ -2,9 +2,11 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/DustInTheWind.ChronoMatrix.Controls;component/DigitStyles.xaml" />
+        <ResourceDictionary Source="/DustInTheWind.ChronoMatrix.Controls;component/ColonStyles.xaml" />
+        <ResourceDictionary Source="/DustInTheWind.ChronoMatrix.Controls;component/Digit23Styles.xaml" />
         <ResourceDictionary Source="/DustInTheWind.ChronoMatrix.Controls;component/Digit46Styles.xaml" />
-        <ResourceDictionary Source="/DustInTheWind.ChronoMatrix.Controls;component/MatrixClockStyles.xaml" />
+        <ResourceDictionary Source="/DustInTheWind.ChronoMatrix.Controls;component/MatrixClock23Styles.xaml" />
+        <ResourceDictionary Source="/DustInTheWind.ChronoMatrix.Controls;component/MatrixClock46Styles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

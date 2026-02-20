@@ -5,10 +5,10 @@
 
     <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" TrueValue="Visible" FalseValue="Hidden" />
 
-    <Style TargetType="{x:Type local:MatrixClock}">
+    <Style TargetType="{x:Type local:MatrixClock23}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:MatrixClock}">
+                <ControlTemplate TargetType="{x:Type local:MatrixClock23}">
 
                     <Viewbox>
                         <Grid>
@@ -21,7 +21,7 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <local:Digit46
+                            <local:Digit23
                                 Grid.Column="0"
                                 ClockTemplate="{TemplateBinding ClockTemplate}"
                                 HorizontalAlignment="Center"
@@ -29,7 +29,7 @@
                                 Value="{TemplateBinding Value1}"
                                 Margin="20 0" />
 
-                            <local:Digit46
+                            <local:Digit23
                                 Grid.Column="1"
                                 ClockTemplate="{TemplateBinding ClockTemplate}"
                                 HorizontalAlignment="Center"
@@ -37,28 +37,13 @@
                                 Value="{TemplateBinding Value2}"
                                 Margin="20 0" />
 
-                            <StackPanel
+                            <local:Colon
                                 Grid.Column="2"
-                                Orientation="Vertical"
-                                VerticalAlignment="Center"
-                                Margin="40 0"
-                                Visibility="{TemplateBinding ColonOn, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                IsOn="{TemplateBinding ColonOn}"
+                                SpaceBetweenDots="200"
+                                DotDiameter="50"/>
 
-                                <Ellipse
-                                    Width="70"
-                                    Height="70"
-                                    Fill="Black"
-                                    Margin="0 0 0 160"/>
-
-                                <Ellipse
-                                    Width="70"
-                                    Height="70"
-                                    Fill="Black"
-                                    Margin="0 160 0 0"/>
-
-                            </StackPanel>
-
-                            <local:Digit46
+                            <local:Digit23
                                 Grid.Column="3"
                                 ClockTemplate="{TemplateBinding ClockTemplate}"
                                 HorizontalAlignment="Center"
@@ -66,7 +51,7 @@
                                 Value="{TemplateBinding Value3}"
                                 Margin="20 0" />
 
-                            <local:Digit46
+                            <local:Digit23
                                 Grid.Column="4"
                                 ClockTemplate="{TemplateBinding ClockTemplate}"
                                 HorizontalAlignment="Center"
@@ -81,5 +66,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
 </ResourceDictionary>

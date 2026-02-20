@@ -4,11 +4,11 @@
     xmlns:local="clr-namespace:DustInTheWind.ChronoMatrix.Controls"
     xmlns:clockwpf="clr-namespace:DustInTheWind.ClockWpf;assembly=DustInTheWind.ClockWpf">
 
-    <Style TargetType="{x:Type local:Digit}">
+    <Style TargetType="{x:Type local:Digit23}">
 
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:Digit}">
+                <ControlTemplate TargetType="{x:Type local:Digit23}">
 
                     <UniformGrid
                         Rows="3"
