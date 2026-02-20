@@ -19,6 +19,9 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
                             <local:Digit23
@@ -57,6 +60,28 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value4}"
+                                Margin="20 0" />
+
+                            <local:Colon
+                                Grid.Column="5"
+                                IsOn="{TemplateBinding ColonOn}"
+                                SpaceBetweenDots="200"
+                                DotDiameter="50"/>
+
+                            <local:Digit23
+                                Grid.Column="6"
+                                ClockTemplate="{TemplateBinding ClockTemplate}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Value="{TemplateBinding Value5}"
+                                Margin="20 0" />
+
+                            <local:Digit23
+                                Grid.Column="7"
+                                ClockTemplate="{TemplateBinding ClockTemplate}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Value="{TemplateBinding Value6}"
                                 Margin="20 0" />
 
                         </Grid>

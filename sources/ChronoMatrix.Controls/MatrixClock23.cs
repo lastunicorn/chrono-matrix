@@ -28,13 +28,13 @@ public class MatrixClock23 : Control
 
     #region Value1 Dependency Property
 
-    internal static readonly DependencyPropertyKey Value1PropertyKey = DependencyProperty.RegisterReadOnly(
+    private static readonly DependencyPropertyKey Value1PropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(Value1),
         typeof(byte),
         typeof(MatrixClock23),
         new PropertyMetadata((byte)0));
 
-    internal readonly static DependencyProperty Value1Property = Value1PropertyKey.DependencyProperty;
+    public readonly static DependencyProperty Value1Property = Value1PropertyKey.DependencyProperty;
 
     public byte Value1
     {
@@ -46,13 +46,13 @@ public class MatrixClock23 : Control
 
     #region Value2 Dependency Property
 
-    internal static readonly DependencyPropertyKey Value2PropertyKey = DependencyProperty.RegisterReadOnly(
+    private static readonly DependencyPropertyKey Value2PropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(Value2),
         typeof(byte),
         typeof(MatrixClock23),
         new PropertyMetadata((byte)0));
 
-    internal readonly static DependencyProperty Value2Property = Value2PropertyKey.DependencyProperty;
+    public readonly static DependencyProperty Value2Property = Value2PropertyKey.DependencyProperty;
 
     public byte Value2
     {
@@ -64,13 +64,13 @@ public class MatrixClock23 : Control
 
     #region Value3 Dependency Property
 
-    internal static readonly DependencyPropertyKey Value3PropertyKey = DependencyProperty.RegisterReadOnly(
+    private static readonly DependencyPropertyKey Value3PropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(Value3),
         typeof(byte),
         typeof(MatrixClock23),
         new PropertyMetadata((byte)0));
 
-    internal readonly static DependencyProperty Value3Property = Value3PropertyKey.DependencyProperty;
+    public readonly static DependencyProperty Value3Property = Value3PropertyKey.DependencyProperty;
 
     public byte Value3
     {
@@ -82,18 +82,54 @@ public class MatrixClock23 : Control
 
     #region Value4 Dependency Property
 
-    internal static readonly DependencyPropertyKey Value4PropertyKey = DependencyProperty.RegisterReadOnly(
+    private static readonly DependencyPropertyKey Value4PropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(Value4),
         typeof(byte),
         typeof(MatrixClock23),
         new PropertyMetadata((byte)0));
 
-    internal readonly static DependencyProperty Value4Property = Value4PropertyKey.DependencyProperty;
+    public readonly static DependencyProperty Value4Property = Value4PropertyKey.DependencyProperty;
 
     public byte Value4
     {
         get => (byte)GetValue(Value4PropertyKey.DependencyProperty);
         private set => SetValue(Value4PropertyKey, value);
+    }
+
+    #endregion
+
+    #region Value5 Dependency Property
+
+    private static readonly DependencyPropertyKey Value5PropertyKey = DependencyProperty.RegisterReadOnly(
+        nameof(Value5),
+        typeof(byte),
+        typeof(MatrixClock23),
+        new PropertyMetadata((byte)0));
+
+    public readonly static DependencyProperty Value5Property = Value4PropertyKey.DependencyProperty;
+
+    public byte Value5
+    {
+        get => (byte)GetValue(Value5PropertyKey.DependencyProperty);
+        private set => SetValue(Value5PropertyKey, value);
+    }
+
+    #endregion
+
+    #region Value6 Dependency Property
+
+    private static readonly DependencyPropertyKey Value6PropertyKey = DependencyProperty.RegisterReadOnly(
+        nameof(Value6),
+        typeof(byte),
+        typeof(MatrixClock23),
+        new PropertyMetadata((byte)0));
+
+    public readonly static DependencyProperty Value6Property = Value4PropertyKey.DependencyProperty;
+
+    public byte Value6
+    {
+        get => (byte)GetValue(Value6PropertyKey.DependencyProperty);
+        private set => SetValue(Value6PropertyKey, value);
     }
 
     #endregion
@@ -178,5 +214,8 @@ public class MatrixClock23 : Control
 
         Value3 = (byte)(now.Minute / 10);
         Value4 = (byte)(now.Minute % 10);
+
+        Value5 = (byte)(now.Second / 10);
+        Value6 = (byte)(now.Second % 10);
     }
 }

@@ -39,96 +39,108 @@ public class Digit23 : Control
 
     #region MovementA Dependency Property
 
-    public static readonly DependencyProperty MovementAProperty = DependencyProperty.Register(
+    private static readonly DependencyPropertyKey MovementAPropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(MovementA),
         typeof(StaticMovement),
         typeof(Digit23),
         new PropertyMetadata(null));
 
+    public static readonly DependencyProperty MovementAProperty = MovementAPropertyKey.DependencyProperty;
+
     public StaticMovement MovementA
     {
         get => (StaticMovement)GetValue(MovementAProperty);
-        private set => SetValue(MovementAProperty, value);
+        private set => SetValue(MovementAPropertyKey, value);
     }
 
     #endregion
 
     #region MovementB Dependency Property
 
-    public static readonly DependencyProperty MovementBProperty = DependencyProperty.Register(
+    private static readonly DependencyPropertyKey MovementBPropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(MovementB),
         typeof(StaticMovement),
         typeof(Digit23),
         new PropertyMetadata(null));
 
+    public static readonly DependencyProperty MovementBProperty = MovementBPropertyKey.DependencyProperty;
+
     public StaticMovement MovementB
     {
         get => (StaticMovement)GetValue(MovementBProperty);
-        private set => SetValue(MovementBProperty, value);
+        private set => SetValue(MovementBPropertyKey, value);
     }
 
     #endregion
 
     #region MovementC Dependency Property
 
-    public static readonly DependencyProperty MovementCProperty = DependencyProperty.Register(
+    private static readonly DependencyPropertyKey MovementCPropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(MovementC),
         typeof(StaticMovement),
         typeof(Digit23),
         new PropertyMetadata(null));
 
+    public static readonly DependencyProperty MovementCProperty = MovementCPropertyKey.DependencyProperty;
+
     public StaticMovement MovementC
     {
         get => (StaticMovement)GetValue(MovementCProperty);
-        private set => SetValue(MovementCProperty, value);
+        private set => SetValue(MovementCPropertyKey, value);
     }
 
     #endregion
 
     #region MovementD Dependency Property
 
-    public static readonly DependencyProperty MovementDProperty = DependencyProperty.Register(
+    private static readonly DependencyPropertyKey MovementDPropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(MovementD),
         typeof(StaticMovement),
         typeof(Digit23),
         new PropertyMetadata(null));
 
+    public static readonly DependencyProperty MovementDProperty = MovementDPropertyKey.DependencyProperty;
+
     public StaticMovement MovementD
     {
         get => (StaticMovement)GetValue(MovementDProperty);
-        private set => SetValue(MovementDProperty, value);
+        private set => SetValue(MovementDPropertyKey, value);
     }
 
     #endregion
 
     #region MovementE Dependency Property
 
-    public static readonly DependencyProperty MovementEProperty = DependencyProperty.Register(
+    private static readonly DependencyPropertyKey MovementEPropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(MovementE),
         typeof(StaticMovement),
         typeof(Digit23),
         new PropertyMetadata(null));
 
+    public static readonly DependencyProperty MovementEProperty = MovementEPropertyKey.DependencyProperty;
+
     public StaticMovement MovementE
     {
         get => (StaticMovement)GetValue(MovementEProperty);
-        private set => SetValue(MovementEProperty, value);
+        private set => SetValue(MovementEPropertyKey, value);
     }
 
     #endregion
 
     #region MovementF Dependency Property
 
-    public static readonly DependencyProperty MovementFProperty = DependencyProperty.Register(
+    private static readonly DependencyPropertyKey MovementFPropertyKey = DependencyProperty.RegisterReadOnly(
         nameof(MovementF),
         typeof(StaticMovement),
         typeof(Digit23),
         new PropertyMetadata(null));
 
+    public static readonly DependencyProperty MovementFProperty = MovementFPropertyKey.DependencyProperty;
+
     public StaticMovement MovementF
     {
         get => (StaticMovement)GetValue(MovementFProperty);
-        private set => SetValue(MovementFProperty, value);
+        private set => SetValue(MovementFPropertyKey, value);
     }
 
     #endregion
@@ -158,6 +170,30 @@ public class Digit23 : Control
 
     #endregion
 
+    #region TransitionSpeed Dependency Property
+
+    public static readonly DependencyProperty TransitionSpeedProperty = DependencyProperty.Register(
+        nameof(TransitionSpeed),
+        typeof(double),
+        typeof(Digit23),
+        new PropertyMetadata(4000.0, HandleTransitionSpeedChanged));
+
+    private static void HandleTransitionSpeedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        if (d is not Digit23 digit)
+            return;
+
+        digit.UpdateTransitionSpeeds();
+    }
+
+    public double TransitionSpeed
+    {
+        get => (double)GetValue(TransitionSpeedProperty);
+        set => SetValue(TransitionSpeedProperty, value);
+    }
+
+    #endregion
+
     static Digit23()
     {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(Digit23), new FrameworkPropertyMetadata(typeof(Digit23)));
@@ -173,15 +209,7 @@ public class Digit23 : Control
         MovementF = new StaticMovement();
 
         UpdateMovements(0);
-
-        double transitionSpeed = 4000;
-
-        MovementA.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementB.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementC.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementD.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementE.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementF.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
+        UpdateTransitionSpeeds();
     }
 
     private void UpdateMovements(byte b)
@@ -279,5 +307,15 @@ public class Digit23 : Control
                 MovementF.Time = LU;
                 break;
         }
+    }
+
+    private void UpdateTransitionSpeeds()
+    {
+        MovementA.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementB.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementC.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementD.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementE.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementF.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
     }
 }
