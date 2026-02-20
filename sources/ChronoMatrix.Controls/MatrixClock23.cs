@@ -168,6 +168,22 @@ public class MatrixClock23 : Control
 
     #endregion
 
+    #region ShowSeconds Dependency Property
+
+    internal static readonly DependencyProperty ShowSecondsProperty = DependencyProperty.Register(
+        nameof(ShowSeconds),
+        typeof(bool),
+        typeof(MatrixClock23),
+        new PropertyMetadata(false));
+
+    public bool ShowSeconds
+    {
+        get => (bool)GetValue(ShowSecondsProperty);
+        set => SetValue(ShowSecondsProperty, value);
+    }
+
+    #endregion
+
     static MatrixClock23()
     {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(MatrixClock23), new FrameworkPropertyMetadata(typeof(MatrixClock23)));
@@ -215,7 +231,10 @@ public class MatrixClock23 : Control
         Value3 = (byte)(now.Minute / 10);
         Value4 = (byte)(now.Minute % 10);
 
-        Value5 = (byte)(now.Second / 10);
-        Value6 = (byte)(now.Second % 10);
+        if (ShowSeconds)
+        {
+            Value5 = (byte)(now.Second / 10);
+            Value6 = (byte)(now.Second % 10);
+        }
     }
 }

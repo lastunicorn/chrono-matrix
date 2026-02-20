@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:DustInTheWind.ChronoMatrix.Controls">
 
-    <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" TrueValue="Visible" FalseValue="Hidden" />
+    <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" TrueValue="Visible" FalseValue="Collapsed" />
 
     <Style TargetType="{x:Type local:MatrixClock46}">
         <Setter Property="Template">
@@ -14,6 +14,9 @@
                         <Grid>
 
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
@@ -57,6 +60,32 @@
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value4}"
                                 Margin="20 0" />
+
+                            <local:Colon
+                                Grid.Column="5"
+                                IsOn="{TemplateBinding ColonOn}"
+                                SpaceBetweenDots="400"
+                                Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                            <local:Digit46
+                                Grid.Column="6"
+                                ClockTemplate="{TemplateBinding ClockTemplate}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Value="{TemplateBinding Value5}"
+                                Margin="20 0"
+                                TransitionSpeed="100000"
+                                Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                            <local:Digit46
+                                Grid.Column="7"
+                                ClockTemplate="{TemplateBinding ClockTemplate}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Value="{TemplateBinding Value6}"
+                                Margin="20 0"
+                                TransitionSpeed="100000"
+                                Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}" />
 
                         </Grid>
 

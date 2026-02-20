@@ -447,6 +447,30 @@ public class Digit46 : Control
 
     #endregion
 
+    #region TransitionSpeed Dependency Property
+
+    public static readonly DependencyProperty TransitionSpeedProperty = DependencyProperty.Register(
+        nameof(TransitionSpeed),
+        typeof(double),
+        typeof(Digit46),
+        new PropertyMetadata(4000.0, HandleTransitionSpeedChanged));
+
+    private static void HandleTransitionSpeedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        if (d is not Digit46 digit)
+            return;
+
+        digit.UpdateTransitionSpeeds();
+    }
+
+    public double TransitionSpeed
+    {
+        get => (double)GetValue(TransitionSpeedProperty);
+        set => SetValue(TransitionSpeedProperty, value);
+    }
+
+    #endregion
+
     static Digit46()
     {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(Digit46), new FrameworkPropertyMetadata(typeof(Digit46)));
@@ -480,33 +504,7 @@ public class Digit46 : Control
         MovementX = new StaticMovement();
 
         UpdateMovements(0);
-
-        double transitionSpeed = 4000;
-
-        MovementA.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementB.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementC.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementD.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementE.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementF.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementG.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementH.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementI.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementJ.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementK.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementL.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementM.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementN.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementO.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementP.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementQ.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementR.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementS.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementT.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementU.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementV.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementW.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
-        MovementX.TransitionSpeed = transitionSpeed + Random.Shared.Next(1000);
+        UpdateTransitionSpeeds();
     }
 
     private void UpdateMovements(byte b)
@@ -834,5 +832,33 @@ public class Digit46 : Control
                 MovementX.Time = LU;
                 break;
         }
+    }
+
+    private void UpdateTransitionSpeeds()
+    {
+        MovementA.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementB.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementC.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementD.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementE.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementF.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementG.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementH.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementI.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementJ.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementK.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementL.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementM.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementN.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementO.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementP.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementQ.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementR.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementS.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementT.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementU.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementV.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementW.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
+        MovementX.TransitionSpeed = TransitionSpeed + Random.Shared.Next(1000);
     }
 }

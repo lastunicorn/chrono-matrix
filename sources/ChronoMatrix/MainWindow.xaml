@@ -21,9 +21,10 @@
     WindowStartupLocation="CenterScreen">
 
     <Grid>
-        <clocks:MatrixClock23
+        <clocks:MatrixClock46
             Margin="20 30"
-            BlinkingColon="False"/>
+            BlinkingColon="False"
+            ShowSeconds="True"/>
 
         <wpfToolkit:ShyControl
             HorizontalAlignment="Left"

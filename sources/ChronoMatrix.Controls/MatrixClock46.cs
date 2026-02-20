@@ -98,6 +98,42 @@ public class MatrixClock46 : Control
 
     #endregion
 
+    #region Value5 Dependency Property
+
+    private static readonly DependencyPropertyKey Value5PropertyKey = DependencyProperty.RegisterReadOnly(
+        nameof(Value5),
+        typeof(byte),
+        typeof(MatrixClock46),
+        new PropertyMetadata((byte)0));
+
+    public readonly static DependencyProperty Value5Property = Value4PropertyKey.DependencyProperty;
+
+    public byte Value5
+    {
+        get => (byte)GetValue(Value5PropertyKey.DependencyProperty);
+        private set => SetValue(Value5PropertyKey, value);
+    }
+
+    #endregion
+
+    #region Value6 Dependency Property
+
+    private static readonly DependencyPropertyKey Value6PropertyKey = DependencyProperty.RegisterReadOnly(
+        nameof(Value6),
+        typeof(byte),
+        typeof(MatrixClock46),
+        new PropertyMetadata((byte)0));
+
+    public readonly static DependencyProperty Value6Property = Value4PropertyKey.DependencyProperty;
+
+    public byte Value6
+    {
+        get => (byte)GetValue(Value6PropertyKey.DependencyProperty);
+        private set => SetValue(Value6PropertyKey, value);
+    }
+
+    #endregion
+
     #region ColonOn Dependency Property
 
     internal static readonly DependencyPropertyKey ColonOnPropertyKey = DependencyProperty.RegisterReadOnly(
@@ -132,6 +168,22 @@ public class MatrixClock46 : Control
 
     #endregion
 
+    #region ShowSeconds Dependency Property
+
+    internal static readonly DependencyProperty ShowSecondsProperty = DependencyProperty.Register(
+        nameof(ShowSeconds),
+        typeof(bool),
+        typeof(MatrixClock46),
+        new PropertyMetadata(false));
+
+    public bool ShowSeconds
+    {
+        get => (bool)GetValue(ShowSecondsProperty);
+        set => SetValue(ShowSecondsProperty, value);
+    }
+
+    #endregion
+
     static MatrixClock46()
     {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(MatrixClock46), new FrameworkPropertyMetadata(typeof(MatrixClock46)));
@@ -146,7 +198,7 @@ public class MatrixClock46 : Control
         ClockTemplate = new CustomTemplate();
 
         timer = new Timer(HandleTimerChanged);
-        
+
         Loaded += OnLoaded;
     }
 
@@ -178,5 +230,11 @@ public class MatrixClock46 : Control
 
         Value3 = (byte)(now.Minute / 10);
         Value4 = (byte)(now.Minute % 10);
+
+        if (ShowSeconds)
+        {
+            Value5 = (byte)(now.Second / 10);
+            Value6 = (byte)(now.Second % 10);
+        }
     }
 }

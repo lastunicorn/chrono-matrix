@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:DustInTheWind.ChronoMatrix.Controls">
 
-    <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" TrueValue="Visible" FalseValue="Hidden" />
+    <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" TrueValue="Visible" FalseValue="Collapsed" />
 
     <Style TargetType="{x:Type local:MatrixClock23}">
         <Setter Property="Template">
@@ -66,7 +66,8 @@
                                 Grid.Column="5"
                                 IsOn="{TemplateBinding ColonOn}"
                                 SpaceBetweenDots="200"
-                                DotDiameter="50"/>
+                                DotDiameter="50"
+                                Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                             <local:Digit23
                                 Grid.Column="6"
@@ -74,7 +75,9 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value5}"
-                                Margin="20 0" />
+                                Margin="20 0"
+                                TransitionSpeed="100000"
+                                Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                             <local:Digit23
                                 Grid.Column="7"
@@ -82,7 +85,9 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value6}"
-                                Margin="20 0" />
+                                Margin="20 0"
+                                TransitionSpeed="100000"
+                                Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                         </Grid>
 
