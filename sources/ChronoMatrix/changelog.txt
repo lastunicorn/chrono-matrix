@@ -6,6 +6,8 @@ Ver 1.2.0
 [change] Slightly randomized the speed of each clock.
 [change] Changed color of the colon to gray.
 [new   ] Displayed seconds.
+[new   ] Added a settings file.
+[new   ] Added an "About" window.
 
 
 Ver 1.1.0

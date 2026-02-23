@@ -43,12 +43,15 @@ public class MainViewModel : ViewModelBase
 
     public ExitAppCommand ExitAppCommand { get; }
 
+    public AboutCommand AboutCommand { get; }
+
     public MainViewModel(ISettings settings)
     {
         this.settings = settings ?? throw new ArgumentNullException(nameof(settings));
 
         Version = Assembly.GetEntryAssembly()?.GetName().Version?.ToString(3);
         ExitAppCommand = new ExitAppCommand();
+        AboutCommand = new AboutCommand();
 
         LoadSettings();
 

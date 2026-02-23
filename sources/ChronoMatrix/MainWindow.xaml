@@ -37,7 +37,8 @@
                     Width="24"
                     Height="24"
                     Content="?"
-                    Margin="0 0 10 0"/>
+                    Margin="0 0 10 0"
+                    Command="{Binding AboutCommand}"/>
 
                 <TextBlock
                     FontSize="12"
