@@ -43,7 +43,8 @@
                             <local:Colon
                                 Grid.Column="2"
                                 IsOn="{TemplateBinding ColonOn}"
-                                SpaceBetweenDots="400"/>
+                                SpaceBetweenDots="400"
+                                Foreground="#303030"/>
 
                             <local:Digit46
                                 Grid.Column="3"
@@ -65,6 +66,7 @@
                                 Grid.Column="5"
                                 IsOn="{TemplateBinding ColonOn}"
                                 SpaceBetweenDots="400"
+                                Foreground="#303030"
                                 Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                             <local:Digit46

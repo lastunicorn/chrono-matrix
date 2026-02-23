@@ -42,10 +42,5 @@ internal class CustomTemplate : ClockTemplate
             IntegralValue = true
         };
         yield return minuteHand;
-
-        //yield return new HideHands
-        //{
-        //    Name = "Scotch"
-        //};
     }
 }

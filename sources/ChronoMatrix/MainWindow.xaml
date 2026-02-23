@@ -23,8 +23,8 @@
     <Grid>
         <clocks:MatrixClock46
             Margin="20 30"
-            BlinkingColon="False"
-            ShowSeconds="True"/>
+            BlinkingColon="True"
+            ShowSeconds="False" />
 
         <wpfToolkit:ShyControl
             HorizontalAlignment="Left"
@@ -33,20 +33,21 @@
             <StackPanel
                 Orientation="Horizontal">
 
-                <TextBlock
-                    FontSize="12"
-                    Foreground="Gray"
-                    Text="Chrono Matrix"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Left"/>
+                <Button
+                    Width="24"
+                    Height="24"
+                    Content="?"
+                    Margin="0 0 10 0"/>
 
                 <TextBlock
                     FontSize="12"
                     Foreground="Gray"
-                    Text="{Binding Version}"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Left"
-                    Margin="5 0 0 0"/>
+                    VerticalAlignment="Center">
+                    
+                    <Run Text="Chrono Matrix" />
+                    <Run Text="{Binding Version, Mode=OneWay}" />
+
+                </TextBlock>
 
             </StackPanel>
 
