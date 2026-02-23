@@ -7,9 +7,9 @@ public class Settings : ISettings
 {
     private readonly IConfiguration configuration;
 
-    public bool ShowSeconds => configuration.GetValue<bool>("ShowSeconds");
+    public bool ShowSeconds => configuration.GetValue("ShowSeconds", defaultValue: false);
 
-    public bool BlinkingColons => configuration.GetValue<bool>("BlinkingColons");
+    public bool BlinkingColons => configuration.GetValue("BlinkingColons", defaultValue: true);
 
     public event EventHandler SettingsChanged;
 
@@ -19,7 +19,7 @@ public class Settings : ISettings
             throw new ArgumentNullException(nameof(configurationFilePath));
 
         configuration = new ConfigurationBuilder()
-            .AddJsonFile(configurationFilePath, optional: false, reloadOnChange: true)
+            .AddJsonFile(configurationFilePath, optional: true, reloadOnChange: true)
             .Build();
 
         MonitorConfigurationChanges();
