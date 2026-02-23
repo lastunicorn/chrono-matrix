@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="ChronoMatrix.Ports.SettingsAccess/ChronoMatrix.Ports.SettingsAccess.csproj" Id="3006dfc7-e746-4e0b-b815-5de0007cd697" />
   <Project Path="ChronoMatrix/ChronoMatrix.csproj" />
   <Folder Name="/SolutionItems/">
     <File Path="Directory.Build.props" />

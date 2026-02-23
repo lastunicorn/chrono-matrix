@@ -20,7 +20,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ChronoMatrix.Controls\ChronoMatrix.Controls.csproj" />
+		<ProjectReference Include="..\ChronoMatrix.Controls\ChronoMatrix.Controls.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\ChronoMatrix.Ports.SettingsAccess\ChronoMatrix.Ports.SettingsAccess.csproj" PrivateAssets="All" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -32,6 +33,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	  <None Update="changelog.txt">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>

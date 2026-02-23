@@ -1,12 +1,13 @@
 ﻿using System.Reflection;
+using DustInTheWind.ChronoMatrix.Ports.SettingsAccess;
 
 namespace DustInTheWind.ChronoMatrix;
 
 public class MainViewModel : ViewModelBase
 {
-    public string Version { get; }
+    private readonly ISettings settings;
 
-    public ExitAppCommand ExitAppCommand { get; }
+    public string Version { get; }
 
     public bool AreColonsBlinking
     {
@@ -34,12 +35,28 @@ public class MainViewModel : ViewModelBase
         }
     }
 
-    public MainViewModel()
+    public ExitAppCommand ExitAppCommand { get; }
+
+    public MainViewModel(ISettings settings)
     {
+        this.settings = settings ?? throw new ArgumentNullException(nameof(settings));
+
         Version = Assembly.GetEntryAssembly()?.GetName().Version?.ToString(3);
         ExitAppCommand = new ExitAppCommand();
 
-        AreColonsBlinking = true;
-        ShowSeconds = false;
+        LoadSettings();
+        
+        this.settings.SettingsChanged += HandleSettingsChanged;
+    }
+
+    private void LoadSettings()
+    {
+        AreColonsBlinking = settings.BlinkingColons;
+        ShowSeconds = settings.ShowSeconds;
+    }
+
+    private void HandleSettingsChanged(object sender, EventArgs e)
+    {
+        LoadSettings();
     }
 }

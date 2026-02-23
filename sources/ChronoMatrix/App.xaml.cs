@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
+using DustInTheWind.ChronoMatrix.Ports.SettingsAccess;
 
 namespace DustInTheWind.ChronoMatrix
 {
@@ -9,9 +11,12 @@ namespace DustInTheWind.ChronoMatrix
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            string appSettingsFilePath = Path.Combine(AppContext.BaseDirectory, "appsettings.json");
+            ISettings settings = new Settings(appSettingsFilePath);
+
             MainWindow = new MainWindow
             {
-                DataContext = new MainViewModel()
+                DataContext = new MainViewModel(settings)
             };
 
             MainWindow.Show();
