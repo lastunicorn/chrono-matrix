@@ -19,6 +19,9 @@ public class MainViewModel : ViewModelBase
 
             field = value;
             OnPropertyChanged();
+
+            if (!IsInitializing)
+                settings.BlinkingColons = value;
         }
     }
 
@@ -32,6 +35,9 @@ public class MainViewModel : ViewModelBase
 
             field = value;
             OnPropertyChanged();
+
+            if (!IsInitializing)
+                settings.ShowSeconds = value;
         }
     }
 
@@ -45,14 +51,17 @@ public class MainViewModel : ViewModelBase
         ExitAppCommand = new ExitAppCommand();
 
         LoadSettings();
-        
+
         this.settings.SettingsChanged += HandleSettingsChanged;
     }
 
     private void LoadSettings()
     {
-        AreColonsBlinking = settings.BlinkingColons;
-        ShowSeconds = settings.ShowSeconds;
+        Initialize(() =>
+        {
+            AreColonsBlinking = settings.BlinkingColons;
+            ShowSeconds = settings.ShowSeconds;
+        });
     }
 
     private void HandleSettingsChanged(object sender, EventArgs e)

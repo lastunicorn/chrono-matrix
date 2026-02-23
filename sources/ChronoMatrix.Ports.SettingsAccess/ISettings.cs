@@ -2,9 +2,9 @@
 
 public interface ISettings
 {
-    bool ShowSeconds { get; }
+    bool ShowSeconds { get; set; }
 
-    bool BlinkingColons { get; }
+    bool BlinkingColons { get; set; }
     
     event EventHandler SettingsChanged;
 }
