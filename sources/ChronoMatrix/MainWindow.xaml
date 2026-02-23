@@ -23,8 +23,8 @@
     <Grid>
         <clocks:MatrixClock46
             Margin="20 30"
-            BlinkingColon="True"
-            ShowSeconds="False" />
+            BlinkingColon="{Binding AreColonsBlinking, Mode=OneWay}"
+            ShowSeconds="{Binding ShowSeconds, Mode=OneWay}" />
 
         <wpfToolkit:ShyControl
             HorizontalAlignment="Left"
@@ -104,5 +104,26 @@
             </Button>
 
         </wpfToolkit:ShyControl>
+
+        <wpfToolkit:ShyControl
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+
+            <StackPanel
+                Orientation="Horizontal">
+
+                <CheckBox
+                    Content="Blinking Colons"
+                    IsChecked="{Binding AreColonsBlinking}" />
+
+                <CheckBox
+                    Content="Show Seconds"
+                    IsChecked="{Binding ShowSeconds}"
+                    Margin="10 0 0 0"/>
+
+            </StackPanel>
+
+        </wpfToolkit:ShyControl>
+        
     </Grid>
 </Window>
