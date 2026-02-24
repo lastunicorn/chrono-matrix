@@ -8,6 +8,7 @@ Ver 1.3.0
          settings file.
 [new   ] Displayed seconds.
 [new   ] Added an "About" window.
+[new   ] Added an icon for the application.
 
 
 Ver 1.2.0
