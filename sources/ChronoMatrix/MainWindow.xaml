@@ -21,7 +21,7 @@
     WindowStartupLocation="CenterScreen">
 
     <local:OverlayPanel>
-        
+
         <clocks:MatrixClock46
             Margin="20 30"
             BlinkingColon="{Binding AreColonsBlinking, Mode=OneWay}"
