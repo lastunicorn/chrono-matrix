@@ -8,6 +8,7 @@
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/ButtonStyles.xaml" />
                 <ResourceDictionary Source="/DustInTheWind.WpfToolkit;component/ShyControlStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
