@@ -18,109 +18,133 @@
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementA}" />
+                            Movement="{TemplateBinding MovementA}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementB}" />
+                            Movement="{TemplateBinding MovementB}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementC}" />
+                            Movement="{TemplateBinding MovementC}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementD}" />
+                            Movement="{TemplateBinding MovementD}"
+                            Focusable="False" />
 
                         <!-- Row 2 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementE}" />
+                            Movement="{TemplateBinding MovementE}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementF}" />
+                            Movement="{TemplateBinding MovementF}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementG}" />
+                            Movement="{TemplateBinding MovementG}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementH}" />
+                            Movement="{TemplateBinding MovementH}"
+                            Focusable="False" />
 
                         <!-- Row 3 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementI}" />
+                            Movement="{TemplateBinding MovementI}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementJ}" />
+                            Movement="{TemplateBinding MovementJ}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementK}" />
+                            Movement="{TemplateBinding MovementK}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementL}" />
+                            Movement="{TemplateBinding MovementL}"
+                            Focusable="False" />
 
                         <!-- Row 4 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementM}" />
+                            Movement="{TemplateBinding MovementM}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementN}" />
+                            Movement="{TemplateBinding MovementN}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementO}" />
+                            Movement="{TemplateBinding MovementO}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementP}" />
+                            Movement="{TemplateBinding MovementP}"
+                            Focusable="False" />
 
                         <!-- Row 5 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementQ}" />
+                            Movement="{TemplateBinding MovementQ}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementR}" />
+                            Movement="{TemplateBinding MovementR}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementS}" />
+                            Movement="{TemplateBinding MovementS}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementT}" />
+                            Movement="{TemplateBinding MovementT}"
+                            Focusable="False" />
 
                         <!-- Row 6 -->
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementU}" />
+                            Movement="{TemplateBinding MovementU}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementV}" />
+                            Movement="{TemplateBinding MovementV}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementW}" />
+                            Movement="{TemplateBinding MovementW}"
+                            Focusable="False" />
 
                         <clockwpf:AnalogClock
                             ClockTemplate="{TemplateBinding ClockTemplate}"
-                            Movement="{TemplateBinding MovementX}" />
+                            Movement="{TemplateBinding MovementX}"
+                            Focusable="False" />
 
                     </UniformGrid>
                 </ControlTemplate>

@@ -30,7 +30,8 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value1}"
-                                Margin="20 0" />
+                                Margin="20 0"
+                                Focusable="False" />
 
                             <local:Digit23
                                 Grid.Column="1"
@@ -38,13 +39,15 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value2}"
-                                Margin="20 0" />
+                                Margin="20 0"
+                                Focusable="False" />
 
                             <local:Colon
                                 Grid.Column="2"
                                 IsOn="{TemplateBinding ColonOn}"
                                 SpaceBetweenDots="200"
-                                DotDiameter="50"/>
+                                DotDiameter="50"
+                                Focusable="False" />
 
                             <local:Digit23
                                 Grid.Column="3"
@@ -52,7 +55,8 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value3}"
-                                Margin="20 0" />
+                                Margin="20 0"
+                                Focusable="False" />
 
                             <local:Digit23
                                 Grid.Column="4"
@@ -60,13 +64,15 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Value="{TemplateBinding Value4}"
-                                Margin="20 0" />
+                                Margin="20 0"
+                                Focusable="False" />
 
                             <local:Colon
                                 Grid.Column="5"
                                 IsOn="{TemplateBinding ColonOn}"
                                 SpaceBetweenDots="200"
                                 DotDiameter="50"
+                                Focusable="False"
                                 Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                             <local:Digit23
@@ -77,6 +83,7 @@
                                 Value="{TemplateBinding Value5}"
                                 Margin="20 0"
                                 TransitionSpeed="100000"
+                                Focusable="False"
                                 Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                             <local:Digit23
@@ -87,6 +94,7 @@
                                 Value="{TemplateBinding Value6}"
                                 Margin="20 0"
                                 TransitionSpeed="100000"
+                                Focusable="False"
                                 Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                         </Grid>
