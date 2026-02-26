@@ -103,7 +103,10 @@ jobs:
     # Create ZIP for release (only on release events)
     - name: Create release archive
       if: github.event_name == 'release' && matrix.configuration == 'Release'
-      run: Compress-Archive -Path ./publish/* -DestinationPath ChronoMatrix-${{ github.event.release.tag_name }}.zip
+      run: |
+        New-Item -ItemType Directory -Path ./release-temp/ChronoMatrix -Force
+        Copy-Item -Path ./publish/* -Destination ./release-temp/ChronoMatrix -Recurse
+        Compress-Archive -Path ./release-temp/ChronoMatrix -DestinationPath ChronoMatrix-${{ github.event.release.tag_name }}.zip
 
     # Upload to GitHub Release (only on release events, Release configuration only)
     - name: Upload Release Asset
