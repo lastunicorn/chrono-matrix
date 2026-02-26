@@ -42,6 +42,8 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  release:
+    types: [ created ]
 
 jobs:
 
@@ -51,12 +53,11 @@ jobs:
       matrix:
         configuration: [Debug, Release]
 
-    runs-on: windows-latest  # For a list of available runner types, refer to
-                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    runs-on: windows-latest
 
     env:
-      Solution_Name: sources\ChronoMatrix.slnx                         # Replace with your solution name, i.e. MyWpfApp.sln.
-      Main_Project_Path: sources\ChronoMatrix\ChronoMatrix.csproj                 # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
+      Solution_Name: sources\ChronoMatrix.slnx
+      Main_Project_Path: sources\ChronoMatrix\ChronoMatrix.csproj
 
     steps:
     - name: Checkout
@@ -92,9 +93,26 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
-    # Upload the build artifacts
+    # Upload the build artifacts (for CI/CD purposes)
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: ChronoMatrix-${{ matrix.configuration }}
         path: ./publish
+
+    # Create ZIP for release (only on release events)
+    - name: Create release archive
+      if: github.event_name == 'release' && matrix.configuration == 'Release'
+      run: Compress-Archive -Path ./publish/* -DestinationPath ChronoMatrix-${{ github.event.release.tag_name }}.zip
+
+    # Upload to GitHub Release (only on release events, Release configuration only)
+    - name: Upload Release Asset
+      if: github.event_name == 'release' && matrix.configuration == 'Release'
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./ChronoMatrix-${{ github.event.release.tag_name }}.zip
+        asset_name: ChronoMatrix-${{ github.event.release.tag_name }}.zip
+        asset_content_type: application/zip
